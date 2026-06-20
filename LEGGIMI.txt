@@ -1,0 +1,27 @@
+EOS MONITOR DEFINITIVO v5
+
+File principali:
+- index.html: schermata TV
+- style.css: grafica/layout
+- script.js: slideshow, meteo, RSS
+- config.js: contenuti modificabili
+
+Per modificare testi, comunicazioni, foto, città o feed RSS apri config.js.
+
+Per provare in locale:
+1. Apri index.html con Chrome.
+2. Premi F11 per schermo intero.
+
+Per pubblicare:
+1. Carica tutti i file e le cartelle su GitHub.
+2. Collega il repository a Netlify.
+3. Apri il link Netlify sulle Smart TV LG.
+
+Meteo: Open-Meteo.
+RSS: Adnkronos Salute con fallback interno.
+
+
+AGGIORNAMENTO v6
+- La prestazione/scritta a sinistra è sincronizzata con la foto.
+- Per cambiare l'abbinamento, modifica l'ordine degli array foto e servizi in config.js.
+- Foto 1 corrisponde a servizio 1, foto 2 a servizio 2, e così via.

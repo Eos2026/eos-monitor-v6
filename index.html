@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>EOS Monitor Sala d'Attesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="screen" aria-label="EOS Monitor Sala d'Attesa">
+    <section class="leftPanel" aria-label="Brand e prestazioni">
+      <div class="brand">
+        <img src="assets/logo/eos-pittogramma-bianco.png" alt="EOS" class="brandMark">
+        <div class="brandText">ODONTOIATRIA • MEDICINA ESTETICA</div>
+      </div>
+
+      <div class="serviceCard">
+        <div class="serviceIcon" id="serviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" aria-label="icona prestazione">
+            <path d="M23.5 9.5c3.9 0 5.7 2.1 8.5 2.1s4.6-2.1 8.5-2.1c7 0 12 5.7 12 13 0 4.2-1.9 8.1-4 11.7-2.1 3.6-3 8-3.6 13.4-.5 4.7-2.3 7.9-5.7 7.9-2.8 0-3.8-2.4-4.7-6.7-.7-3.3-1.5-7.5-2.5-7.5s-1.8 4.2-2.5 7.5c-.9 4.3-1.9 6.7-4.7 6.7-3.4 0-5.2-3.2-5.7-7.9-.6-5.4-1.5-9.8-3.6-13.4-2.1-3.6-4-7.5-4-11.7 0-7.3 5-13 12-13Z" />
+          </svg>
+        </div>
+        <h1 id="serviceTitle">Implantologia</h1>
+        <div class="serviceGlow" aria-hidden="true"></div>
+        <p id="serviceText">Soluzioni avanzate per ritrovare il sorriso e la funzionalità.</p>
+        <div class="serviceDots" id="serviceDots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="photoArea" aria-label="Foto dello studio">
+      <div class="topTime">
+        <div id="time">--:--</div>
+        <div class="timeDivider"></div>
+        <div id="date">--</div>
+      </div>
+      <div class="photoFrame">
+        <img id="slideImage" src="" alt="Foto dello studio EOS">
+      </div>
+    </section>
+
+    <section class="eosTicker panelLine" aria-label="Comunicazioni EOS">
+      <div class="tickerLabel">
+        <span class="labelIcon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M7 29h9l22-12v30L16 35H7z"/><path d="M43 24c4 2 6 5 6 8s-2 6-6 8"/><path d="M49 17c7 4 11 9 11 15s-4 11-11 15"/></svg>
+        </span>
+        <strong>COMUNICAZIONI EOS</strong>
+      </div>
+      <div class="tickerMask">
+        <div class="tickerTrack" id="eosTickerTrack"></div>
+      </div>
+    </section>
+
+    <section class="bottomRow" aria-label="Meteo e notizie">
+      <div class="weatherBox panelLine">
+        <div class="weatherIcon" id="weatherIcon">⛅</div>
+        <div class="weatherMain">
+          <strong id="temp">--°</strong>
+          <span id="city">Camaiore</span>
+        </div>
+      </div>
+
+      <div class="rssTicker panelLine">
+        <div class="rssLabel" aria-label="Adnkronos live">
+          <span class="adkMark" aria-hidden="true"></span>
+          <strong>adnkronos</strong>
+          <em>LIVE</em>
+        </div>
+        <div class="tickerMask rssMask">
+          <div class="tickerTrack" id="rssTickerTrack"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footerLine" aria-label="Informazioni istituzionali">
+      <div class="footerIcon">i</div>
+      <strong>EOS srl</strong>
+      <span>Via Fossetta 7/A</span>
+      <span>55041 Camaiore (LU)</span>
+      <span>P.iva 02672500465</span>
+      <span>Dir. Sanitario Dott.ssa Antonella Panattoni</span>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

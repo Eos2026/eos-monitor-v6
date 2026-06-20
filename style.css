@@ -1,0 +1,68 @@
+:root{
+  --white:#fff;
+  --line:rgba(255,255,255,.28);
+  --panel:rgba(18,42,113,.20);
+  --panel-dark:rgba(18,28,82,.38);
+  --shadow:0 22px 75px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:"Segoe UI",Inter,Roboto,Arial,sans-serif;color:var(--white);background:#0b5fa8}
+.screen{
+  position:relative;width:100vw;height:100vh;overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 34%, rgba(88,201,214,.34) 0 23%, transparent 44%),
+    radial-gradient(circle at 92% 4%, rgba(224,48,137,.48) 0 24%, transparent 50%),
+    linear-gradient(133deg,#10a6c8 0%,#0b67b6 33%,#443099 68%,#c02085 100%);
+}
+.screen::before{
+  content:"";position:absolute;inset:-12% -10%;pointer-events:none;
+  background:
+    radial-gradient(circle at 8% 17%, transparent 0 20%, rgba(255,255,255,.08) 20.2% 20.55%, transparent 20.9% 100%),
+    radial-gradient(circle at 31% 54%, transparent 0 37%, rgba(255,255,255,.045) 37.2% 37.55%, transparent 37.9% 100%);
+  opacity:.95;
+}
+.leftPanel{position:absolute;left:3.0vw;top:7.9vh;width:24.0vw;height:64.0vh;z-index:2;display:flex;flex-direction:column;align-items:center}
+.brand{width:100%;text-align:center}
+.brandMark{width:22.1vw;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.12))}
+.brandText{margin-top:1.4vh;font-size:1.12vw;letter-spacing:.02em;font-weight:360;white-space:nowrap;text-shadow:0 2px 14px rgba(0,0,0,.15)}
+.serviceCard{margin-top:7.9vh;width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;transition:opacity .55s ease,transform .55s ease}
+.serviceCard.fade{opacity:0;transform:translateY(8px)}
+.serviceIcon{width:5.4vw;height:5.4vw;border:1.6px solid rgba(255,255,255,.86);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:3.8vh}
+.serviceIcon svg{width:3.0vw;height:3.0vw;fill:none;stroke:#fff;stroke-width:4.1;stroke-linecap:round;stroke-linejoin:round}
+.serviceCard h1{font-size:2.28vw;line-height:1.05;margin:0;text-transform:uppercase;font-weight:800;letter-spacing:-.02em;text-shadow:0 4px 22px rgba(0,0,0,.22)}
+.serviceGlow{width:16.5vw;height:2.8vh;margin:.6vh 0 2.6vh;filter:blur(.4px);background:radial-gradient(ellipse at center,rgba(255,255,255,.96) 0,rgba(111,225,255,.88) 14%,rgba(90,92,255,.26) 33%,transparent 70%)}
+.serviceCard p{font-size:1.46vw;line-height:1.45;margin:0;max-width:19.2vw;font-weight:310;text-shadow:0 4px 18px rgba(0,0,0,.18)}
+.serviceDots{display:flex;gap:1.02vw;margin-top:6.9vh}
+.serviceDots span{width:.90vw;height:.90vw;border-radius:50%;background:rgba(255,255,255,.42)}
+.serviceDots span.active{background:#fff}
+.photoArea{position:absolute;left:28.15vw;right:1.85vw;top:2.45vh;height:70.9vh;z-index:2}
+.topTime{position:absolute;right:1.05vw;top:.25vh;display:flex;align-items:center;gap:1.25vw;z-index:5;text-align:left}
+#time{font-size:3.55vw;line-height:1;font-weight:300;letter-spacing:-.045em;text-shadow:0 5px 28px rgba(0,0,0,.12)}
+.timeDivider{width:1px;height:5.6vh;background:rgba(255,255,255,.65)}
+#date{font-size:1.04vw;line-height:1.34;font-weight:350;text-transform:capitalize;text-shadow:0 5px 20px rgba(0,0,0,.14)}
+.photoFrame{position:absolute;left:0;right:0;top:8.2vh;height:63.2vh;border-radius:1.6vw;overflow:hidden;border:1px solid rgba(255,255,255,.48);box-shadow:var(--shadow);background:rgba(255,255,255,.12)}
+#slideImage{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:opacity .9s ease;opacity:1;background:rgba(255,255,255,.22)}
+.panelLine{border:1px solid var(--line);background:rgba(18,42,113,.18);box-shadow:0 14px 34px rgba(0,0,0,.10);backdrop-filter:blur(12px);border-radius:.8vw}
+.eosTicker{position:absolute;left:1.85vw;right:1.85vw;top:75.35vh;height:6.35vh;display:flex;align-items:center;padding:0 1.45vw;z-index:3;background:rgba(19,42,112,.15)}
+.tickerLabel{height:100%;display:flex;align-items:center;gap:1.05vw;padding-right:1.55vw;margin-right:1.35vw;border-right:1px solid rgba(255,255,255,.35);white-space:nowrap;font-size:1.08vw}
+.labelIcon{width:2.25vw;height:2.25vw;display:flex;align-items:center;justify-content:center;flex:0 0 2.25vw}
+.labelIcon svg{width:2.25vw;height:2.25vw;fill:none;stroke:#fff;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.tickerMask{position:relative;overflow:hidden;flex:1;height:100%;display:flex;align-items:center;mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 96%,transparent 100%)}
+.tickerTrack{display:inline-flex;align-items:center;gap:2.0vw;white-space:nowrap;will-change:transform;animation:scrollTicker 40s linear infinite;font-size:1.00vw;line-height:1}
+.tickerTrack span::after{content:"•";margin-left:2.0vw;opacity:.95}
+@keyframes scrollTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.bottomRow{position:absolute;left:1.85vw;right:1.85vw;top:84.6vh;height:5.25vh;display:flex;gap:.95vw;z-index:3}
+.weatherBox{width:12.0vw;flex:0 0 12.0vw;display:flex;align-items:center;padding:0 1.15vw;gap:.82vw;background:rgba(0,76,152,.44);border-radius:.72vw}
+.weatherIcon{font-size:2.05vw;line-height:1;filter:drop-shadow(0 3px 8px rgba(0,0,0,.12))}
+.weatherMain{display:flex;flex-direction:column;line-height:1.02}.weatherMain strong{font-size:1.82vw;font-weight:800;letter-spacing:-.03em}.weatherMain span{font-size:.83vw;margin-top:.28vh;opacity:.98}
+.rssTicker{flex:1;display:flex;align-items:center;padding:0 1.25vw;background:rgba(18,25,75,.36);border-radius:.72vw}
+.rssLabel{height:100%;display:flex;align-items:center;gap:.62vw;margin-right:1.45vw;padding-right:1.45vw;border-right:1px solid rgba(255,255,255,.30);white-space:nowrap}
+.adkMark{position:relative;width:2.05vw;height:1.70vh;display:inline-block;flex:0 0 2.05vw}
+.adkMark::before{content:"";position:absolute;left:0;top:0;width:1.0vw;height:1.7vh;background:#ed1b2e;clip-path:polygon(100% 0,0 100%,100% 100%)}
+.adkMark::after{content:"";position:absolute;right:0;top:0;width:.9vw;height:1.7vh;background:#ed1b2e;clip-path:polygon(0 0,0 100%,100% 100%)}
+.rssLabel strong{font-size:1.04vw;font-weight:800;text-transform:lowercase;letter-spacing:-.035em}.rssLabel em{font-style:normal;font-size:.78vw;font-weight:800;background:#ff1818;color:#fff;padding:.20vh .35vw;border-radius:.22vw}
+.rssMask .tickerTrack{animation-duration:58s;font-size:.90vw}
+.footerLine{position:absolute;left:1.85vw;right:1.85vw;bottom:1.8vh;height:4.5vh;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:1.95vw;color:rgba(255,255,255,.94);z-index:3;font-size:1.07vw;white-space:nowrap}
+.footerLine span,.footerLine strong{position:relative}.footerLine span:not(:last-child)::after,.footerLine strong::after{content:"";position:absolute;right:-1.05vw;top:50%;width:1px;height:2.15vh;background:rgba(255,255,255,.34);transform:translateY(-50%)}
+.footerIcon{width:1.85vw;height:1.85vw;border:1.5px solid rgba(255,255,255,.82);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-style:italic;font-size:1.12vw;margin-right:2.35vw}
+@media (max-width:1200px){.screen{font-size:14px}}
