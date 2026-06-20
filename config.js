@@ -21,7 +21,7 @@ window.CONFIG = {
   durataSlideSecondi: 8,
   // La scritta/prestazione a sinistra cambia insieme alla foto.
   durataTickerEOSSecondi: 40,
-  durataTickerRSSSecondi: 80,
+  durataTickerRSSSecondi: 85,
 
   foto: [
     { file: "assets/foto/desk-sala-attesa.jpg", posizione: "left center", zoom: "cover" },
